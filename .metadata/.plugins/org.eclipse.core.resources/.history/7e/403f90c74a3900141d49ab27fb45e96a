@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package project1;
+
+/**
+ * @author Margo
+ *
+ */
+public class calculator {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Declare variables 
+		double P = 25000;
+		double r = 0.0499;
+		int t;
+		double A;
+	}
+		
+		// Compute amount of money paid back on a car loan over a number of years at a fixed rate
+		// Compound interest formula, 12 = number of payments per year
+		public static void fourYears(A) {
+			A = P * Math.pow((1 + (r/12)), 12*t);
+			t = 4;			
+			System.out.println("Total paid after four years:");
+			System.out.println(A);
+
+		}			
+	
+		public static void fiveYears(A) {
+			A = P * Math.pow((1 + (r/12)), 12*t);
+			t = 5;			
+			System.out.println("Total paid after five years:");
+			System.out.println(A);
+
+		}
+				
+		fourYears();
+		fiveYears();
+		
+
+	
+	}
+	
+}
