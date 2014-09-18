@@ -1,3 +1,4 @@
+
 /**
  * 
  */
@@ -18,31 +19,29 @@ public class calculator {
 	public static void main(String[] args) {
 		// Declare scanner for use
 		Scanner console = new Scanner(System.in);
-
+		
 		// Prompt for user input
-		System.out
-				.println("Use this calculator to determine total loan repayment");
+		System.out.println("Use this calculator to determine total loan repayment");
 		System.out.print("Initial Loan Amount:	");
 		double loan = console.nextDouble();
-		System.out.print("Interest rate(%):		");
+		System.out.print("Interest rate:		");
 		double rate = console.nextDouble();
 		System.out.print("Number of years:		");
 		int years = console.nextInt();
-		double A = getTotal(loan, rate, years);
-		System.out.println(A);
 	}
-
-	// Compute and print results
+	// Compute and print results	
 	public static double getTotal(double loan, double rate, int years) {
 
-		double A;
-		A = loan * Math.pow((1 + (rate / 1200)), 12 * years);
-
-		return A;
-		// Compute amount of money paid back on a car loan over any number of
-		// years at a fixed rate
+	double A;
+	A = loan * Math.pow((1 + (rate/12)), 12*years);
+	
+	
+	System.out.println(A);
+	return A;
+		// Compute amount of money paid back on a car loan over any number of years at a fixed rate
 		// Compound interest formula, 12 = number of payments per year
+		
 
-	}
+		}			
 
 }
