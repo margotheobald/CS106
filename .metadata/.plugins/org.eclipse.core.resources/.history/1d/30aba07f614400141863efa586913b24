@@ -34,7 +34,7 @@ public class Project2 {
 		healthFactor += question4(console);
 		if (healthFactor >= 13) {
 			System.out
-					.println("Your eating habits are healthy; you might want to have a little treat.");
+					.println("Your eating habits are healthy, you might want to have a little treat.");
 		} else if (healthFactor <= 12 && healthFactor >= 9) {
 			System.out.println("Your eating habits are right on track.");
 		} else if (healthFactor <= 8 && healthFactor >= 5) {
@@ -48,12 +48,12 @@ public class Project2 {
 				.println("What do you eat for breakfast on Saturday morning?");
 		System.out.println("A: Oatmeal with Greek yogurt");
 		System.out.println("B: Eggs, bacon, homefries, and toast");
-		System.out.println("C: Waffles with whipped cream and syrup");
+		System.out.println("C: Waffles with whipped cream and syrum");
 		System.out.println("D: Fruit smoothie");
 		System.out.print("Please choose the answer that best describes you:");
 		String answer = console.nextLine();
 
-		/* Evaluate the answer provided by the participant */
+		/* Evaluate the answer provided by the quizee */
 		if (answer.equals("A")) {
 			return 3;
 		} else if (answer.equals("B")) {
@@ -67,8 +67,7 @@ public class Project2 {
 
 	public static int question2(Scanner console) {
 		System.out
-				.println("After a long week at work, you're too tired to \"really\" cook.");
-		System.out.println("What will you have for dinner Friday night?");
+				.println("After a long week at work, you're too tired to \"really\" cook.  What do you have for dinner Friday night?");
 		System.out
 				.println("A: Cheese and crackers, fruit, and a glass of wine");
 		System.out.println("B: Pizza and wings, I have them on speed-dial");
@@ -79,7 +78,7 @@ public class Project2 {
 		System.out.print("Please choose the answer that best describes you:");
 		String answer = console.nextLine();
 
-		/* Evaluate the answer provided by the participant */
+		/* Evaluate the answer provided by the quizee */
 		if (answer.equals("A")) {
 			return 2;
 		} else if (answer.equals("B")) {
@@ -99,7 +98,7 @@ public class Project2 {
 		System.out.print("Please choose the answer that best describes you:");
 		String answer = console.nextLine();
 
-		/* Evaluate the answer provided by the participant */
+		/* Evaluate the answer provided by the quizee */
 		if (answer.equals("A")) {
 			return 4;
 		} else if (answer.equals("B")) {
@@ -119,7 +118,7 @@ public class Project2 {
 		System.out.print("Please choose the answer that best describes you:");
 		String answer = console.nextLine();
 
-		/* Evaluate the answer provided by the participant */
+		/* Evaluate the answer provided by the quizee */
 		if (answer.equals("A")) {
 			return 4;
 		} else if (answer.equals("B")) {
