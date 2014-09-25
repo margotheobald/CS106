@@ -36,10 +36,8 @@ public class Project2 {
 			System.out.println("Your eating habits are healthy, but you might want to have a little treat.");
 			
 		} else if (healthFactor <=12 && healthFactor>=9){
-			System.out.println("Your eating habits are right on track.");
-		} else if (healthFactor <=8 && healthFactor>=5){
-			System.out.println("Your eating habits need improvement.");
-		} else System.out.println("You are headed for a heart attack.");
+			System.out.println("Your eating habits are right on track.")
+		} else if
 	}
 
 	public static int question1(Scanner console) {
@@ -83,10 +81,10 @@ public class Project2 {
 
 	public static int question3(Scanner console) {
 		System.out.println("What do you drink throughout the day?");
-		System.out.println("A: Water");
-		System.out.println("B: Gatorade, Powerade, or Vitamin Water");
-		System.out.println("C: Soda");
-		System.out.println("D: Coffee or tea");
+		System.out.println("Water");
+		System.out.println("Gatorade, Powerade, or Vitamin Water");
+		System.out.println("Soda");
+		System.out.println("Coffee or tea");
 		System.out.print("Please choose the answer that best describes you:"); 
 		String answer = console.nextLine();
 		
@@ -102,10 +100,10 @@ public class Project2 {
 
 	public static int question4(Scanner console) {
 		System.out.println("How many nights a week do you eat dessert?");
-		System.out.println("A: Never");
-		System.out.println("B: 1-3 nights a week");
-		System.out.println("C: 4-6 nights a week");
-		System.out.println("D: Every night");
+		System.out.println("Never");
+		System.out.println("1-3 nights a week");
+		System.out.println("4-6 nights a week");
+		System.out.println("Every night");
 		System.out.print("Please choose the answer that best describes you:"); 
 		String answer = console.nextLine();
 		
@@ -118,6 +116,8 @@ public class Project2 {
 			return 2;
 		} else return 1;
 	}
+/* calculate results*/
+	
 
 
 
