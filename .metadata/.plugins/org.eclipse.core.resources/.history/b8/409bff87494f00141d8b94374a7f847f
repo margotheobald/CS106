@@ -1,0 +1,39 @@
+/**
+ * 
+ */
+package project4;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ * 
+ * Project 4 must:
+ * Use a Scanner and a File object to read the input from the file
+ * Compute the total balance of the checking, savings, and credit card 
+ *     accounts at the end of the month
+ * Opening balances and deposits are positive, withdrawals are negative
+ * Output the total balances for each account to an output file 
+ *     called output.txt
+
+ */
+public class Project4 {
+
+	/**
+	 * @param args
+	 * 
+	 * @throws FileNotFoundException
+	 *             if the file is not found.
+	 */
+	public static void main(String[] args) throws FileNotFoundException {
+		Scanner input = new Scanner(new File("src/input.txt"));
+		while (input.hasNext()) {
+			System.out.println(input.nextLine());
+		}
+		input.close();
+		
+		
+	}
+
+}

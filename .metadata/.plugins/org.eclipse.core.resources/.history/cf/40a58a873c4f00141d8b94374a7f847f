@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package project4;
+
+import java.io.*;
+import java.util.scanner;
+import java.io.*;
+
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ * 
+ * Project 4 includes:
+ *
+ */
+public class Project4 {
+
+	/**
+	 * @param args
+	 * 
+	 * @throws FileNotFoundException if the file is not found.
+	 */
+	public static void main(String[] args) throws FileNotFoundException{
+		Scanner fileReader = new Scanner (new File ("src/input.txt"));
+		System.out.println(fileReader.next());
+		fileReader.close();
+	}
+
+}
