@@ -1,0 +1,57 @@
+/**
+ * 
+ */
+package project5;
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Staff {
+	private String name;
+	private Guest[] guestList;
+	private int guestIndex;
+	private String program;
+	
+	public Staff (String staffName, String program){
+		this.setName(staffName);
+		this.program = program;
+		this.guestList = new Guest [10];
+		guestIndex = 0;
+	}
+
+	public void add (Guest g){
+		if (guestIndex > guestList.length){
+			Guest temp[] = new Guest [guestList.length+10];
+			for (int i=0; i<guestList.length; i++){
+				temp[i]=guestList[i];
+			}
+			temp[guestIndex]=g;
+			guestList=temp;
+			guestIndex++;		
+		}
+		else {
+			guestList[guestIndex]=g;
+			guestIndex++;
+		}
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getProgram() {
+		// TODO Auto-generated method stub
+		return this.program;
+	}
+	private String printGuestList(){
+		String s = "";
+		for (int i = 0; i < guestIndex; i++){
+			String g = guestList[i].getName() + " " + guestList[i].getEmail() + "\n";
+					}
+	}
+}

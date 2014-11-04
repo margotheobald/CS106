@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package project5;
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Staff {
+private String name;
+private Guest[] guestList;
+private int guestIndex;
+
+public Staff (String staffName){
+	this.name = staffName;
+	this.guestList = new Guest [10];
+	guestIndex = 0;
+	}
+
+public void add (Guest g){
+	
+}
+}

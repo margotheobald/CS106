@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+/**
+ * 
+ *   
+ */
+package project5;
+
+/**
+ * A program to print for staff a list of hotel reservations for their program participants.
+ * 
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Project5 {
+
+	/**
+	 * @param args
+	 * 
+	 * @throws FileNotFoundException
+	 * 
+	 */
+	public static void main(String[] args) throws FileNotFoundException {
+		File f = new File ("scr/hotelrooms.txt");
+	}
+
+}

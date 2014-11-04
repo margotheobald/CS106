@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package project5;
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Project5 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

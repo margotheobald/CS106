@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package project5;
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Staff {
+private String name;
+private Guest[] guestList;
+
+}

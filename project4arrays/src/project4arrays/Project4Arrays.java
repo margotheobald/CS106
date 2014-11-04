@@ -13,9 +13,7 @@ import java.io.*;
 public class Project4Arrays {
 
 	/**
-	 * 
 	 * @param args
-	 * 
 	 * @throws FileNotFoundException
 	 *             if the file is not found.
 	 */
@@ -37,7 +35,6 @@ public class Project4Arrays {
 		/**
 		 * create arrays, seed with number of lines in file, tell how big they
 		 * need to be.
-		 * 
 		 */
 		String[] dates = new String[lines];
 		String[] accounts = new String[lines];
@@ -49,7 +46,7 @@ public class Project4Arrays {
 
 			// store the date in the array
 			dates[index] = fileReader.next();
-			
+
 			accounts[index] = fileReader.next();
 			if (accounts[index].equals("Credit")) {
 				accounts[index] = accounts[index] + " " + fileReader.next();
@@ -63,13 +60,13 @@ public class Project4Arrays {
 			index++;
 		}
 		fileReader.close();
-		
+
 		// calculate totals
 
 		double checking = 0.0;
 		double savings = 0.0;
 		double credit = 0.0;
-		for (int i = 0; i < dates.length; i++) {
+		for (index = 0; index < dates.length; index++) {
 			if (accounts[index].equals("Checking")) {
 				if (transactions[index].equals("Withdrawal")) {
 					checking -= amounts[index];
@@ -89,10 +86,10 @@ public class Project4Arrays {
 					credit += amounts[index];
 				}
 			}
+		}
 		System.out.println("Checking balance is $" + checking);
 		System.out.println("Savings balance is $" + savings);
 		System.out.println("Credit Card balance is $" + credit);
-	}
 
 	}
 }

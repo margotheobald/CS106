@@ -1,0 +1,64 @@
+/**
+ * 
+ */
+package project5;
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Guest {
+	/*
+	 * Define instance variables
+	 */
+	private String name;
+	private String email;
+	private String hotel;
+	private String arrival;
+	private String departure;
+	private String program;
+
+	/**
+	 * Create a constructor to make a guest object
+	 */
+
+	public Guest(String theName, String theEmail, String theHotel,
+			String theArrival, String theDeparture,
+			String theProgram) {
+	
+		this.name = theName;
+		this.email = theEmail;
+		this.hotel = theHotel;
+		this.arrival = theArrival;
+		this.departure = theDeparture;
+		this.program = theProgram;
+	}
+
+	/*
+	 * accessors for instance variables
+	 */
+
+	public String getName(){
+		return name;
+		}
+	public String getEmail(){
+		return email;
+	}
+	public String getHotel(){
+		return hotel;
+	}
+	public String getArrival(){
+		return arrival;
+	}
+	public String getDeparture(){
+		return departure;
+	}
+	public String getProgram(){
+		return program;
+	}
+//	public String toString(){
+/*		return name + " " + email + " " + hotel + " " + arrival + " " + departure + " " + program;
+		
+	}
+*/}
+
