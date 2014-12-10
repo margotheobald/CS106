@@ -1,0 +1,25 @@
+Salome Egas	$salome@skidmore.edu	$Marriott	$10/23/2014	$10/25/2014	$Davis
+Yahia Iman	$yahia@skidmore.edu	$Marriott	$10/23/2014	$10/25/2014	$Davis
+Mlungisi Mil-G Ndwandwe	$mlungisi@skidmore.edu	$Marriott	$10/23/2014	$10/25/2014	$Davis
+Johane Simelane	$johane@skidmore.edu	$Marriott	$10/23/2014	$10/25/2014	$Davis
+Haoran Ma	$haoran@skidmore.edu	$Marriott	$10/24/2014	$10/25/2014	$Davis
+Ayelen Pagnanelli	$ayelen@skidmore.edu	$Marriott	$10/23/2014	$10/25/2014	$Davis
+Elaine Lai Yu Ling	$elaine@skidmore.edu	$Marriott	$10/23/2014	$10/25/2014	$Davis
+Joseph Kaifala	$joseph@skidmore.edu	$Marriott	$10/23/2014	$10/25/2014	$Davis
+Andrea Roman Alfaro	$andrea@skidmore.edu	$Marriott	$10/21/2014	$10/25/2014	$Davis
+Wissam Khalifa	$wissam@skidmore.edu	$Marriott	$10/22/2014	$10/25/2014	$Davis
+Bev Payne	$bevpayne@skidmore.edu	$Holiday Inn	$10/16/2014	$10/18/2014	$Closer Look
+Betty Hewitt	$bettyh@skidmore.edu	$Holiday Inn	$10/16/2014	$10/18/2014	$Closer Look
+Barbara	Ruth	$barbara@skidmore.edu	$Longfellows	$10/17/2014	$10/19/2014	$Closer Look
+Ken Freirich	$ken@skidmore.edu	$Longfellows	$10/16/2014	$10/18/2014	$Closer Look
+Nancy Brennan	$nancyb@skidmore.edu	$Marriott	$10/24/2014	$10/26/2014	$Alumni Board
+Natasha Fahey	$natasha@skidmore.edu	$Marriott	$10/24/2014	$10/26/2014	$Alumni Board
+Betsy Bertoni	$betsyb@skidmore.edu	$Marriott	$10/24/2014	$10/26/2014	$Alumni Board
+Bill Haydon	$billhay@skidmore.edu	$Marriott	$10/24/2014	$10/26/2014	$Board of Trustees
+Chuck Kaufman	$chuckk@skidmore.edu	$Marriott	$10/24/2014	$10/26/2014	$Alumni Board
+Jeff Martin	$jmartin@skidmore.edu	$Marriott	$10/24/2014	$10/26/2014	$Alumni Board
+Bill Ladd	$billladd@skidmore.edu	$Longfellows	$10/24/2014	$10/26/2014	$Board of Trustees
+Janet Whitman	$janet@skidmore.edu	$Surrey Inn	$10/24/2014	$10/26/2014	$Board of Trustees
+Sue Thomas	$suzanne@skidmore.edu	$Surrey Inn	$10/24/2014	$10/26/2014	$Board of Trustees
+Sara Schupf	$saralee@skidmore.edu	$Surrey Inn	$10/24/2014	$10/26/2014	$Board of Trustees
+Jon Brestoff	$jonbp@skidmore.edu	$Surrey Inn	$10/24/2014	$10/26/2014	$Board of Trustees

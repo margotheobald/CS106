@@ -1,0 +1,136 @@
+package project5;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * A program to print for staff a list of hotel reservations for their program
+ * participants.
+ * 
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Project5 {
+	/**
+	 * @param args
+	 * @throws FileNotFoundException
+	 */
+	public static void main(String[] args) throws FileNotFoundException,
+			IOException {
+		Events e = new Events("hotelrooms.txt", "staff.txt");
+		// System.out.println(e);
+		boolean isRunning = true;
+		Scanner stream = new Scanner(System.in);
+
+		System.out.println("Welcome to the Big Brother Reservation System");
+		System.out.println("Please choose from the following options:");
+		System.out.println("Please enter one of the corresponding values \n"
+				+ "1 to add a guest \n" + "2 to add a staff member \n"
+				+ "3 to add an event \n"
+				+ "0 to exit Big Brother, who will still be watching you...");
+
+		while (isRunning) {
+			String input = "";
+			input = stream.nextLine();
+			System.out.println(input);
+			if (input.equalsIgnoreCase("0")) {
+				isRunning = false;
+			} else if (input.equals("1")) {
+				boolean entry = true;
+				while (entry) {
+					String fullName;
+					String email;
+					String hotel;
+					String arrivalDate;
+					String departureDate;
+					String event;
+					System.out.println("Enter the guest's first and last name");
+					fullName = stream.nextLine();
+					System.out.println("Enter the guest's email address");
+					email = stream.nextLine();
+					System.out
+							.println("Enter the hotel where the guest will be staying");
+					hotel = stream.nextLine();
+					System.out.println("Enter the arrival date");
+					arrivalDate = stream.nextLine();
+					System.out.println("Enter the departure date");
+					departureDate = stream.nextLine();
+					System.out
+							.println("What event will your guest be attending?");
+					event = stream.nextLine();
+					boolean enterProgram = true;
+					while (enterProgram) {
+						if (e.programExists(event)) {
+							enterProgram = false;
+						} else {
+							System.out.println("Please enter a valid event.");
+							System.out.println(e.printProgram());
+							event = stream.nextLine();
+
+						}
+
+					}
+
+					Guest theGuest = new Guest(fullName, email, hotel,
+							arrivalDate, departureDate, event);
+					System.out.println(theGuest.getName()
+							+ theGuest.getProgram());
+					System.out
+							.println("Would you like to enter another guest? (Y/N)");
+					String more = stream.nextLine();
+					if (!more.equalsIgnoreCase("Y")) {
+						entry = false;
+
+					}
+				}
+
+			} else if (input.equals("2")) {
+				boolean entry = true;
+				while (entry) {
+					String staffName;
+					String event;
+					System.out.println("Enter a new staff name");
+					staffName = stream.nextLine();
+					System.out.println("Enter the associated event");
+					event = stream.nextLine();
+					boolean enterProgram = true;
+					while (enterProgram) {
+						if (!e.programExists(event)) {
+							enterProgram = false;
+						} else {
+							System.out
+									.println("There is already a staff member assigned to this event.  Please enter a new event or type 'cancel' to cancel staff entry.");
+							System.out.println(e.printProgram());
+							event = stream.nextLine();
+
+						}
+
+					}
+					if (!event.equalsIgnoreCase("cancel")) {
+						Staff s = new Staff(staffName, event);
+						System.out.println(s.getName() + " " + s.getProgram());
+
+					}
+					System.out
+							.println("Would you like to enter another staff member? (Y/N)");
+					String more = stream.nextLine();
+					if (!more.equalsIgnoreCase("Y")) {
+						entry = false;
+
+					}
+
+				}
+			}
+
+			System.out.println("Please choose from the following options:");
+			System.out
+					.println("Please enter one of the corresponding values \n"
+							+ "1 to add a guest \n"
+							+ "2 to add a staff member \n"
+							+ "3 to add an event \n"
+							+ "0 to exit Big Brother, who will still be watching you...");
+
+		}
+		stream.close();
+	}
+}

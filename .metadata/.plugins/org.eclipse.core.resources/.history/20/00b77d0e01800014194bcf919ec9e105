@@ -1,0 +1,199 @@
+/**
+ * 
+ */
+package project5;
+
+import java.io.*;
+import java.util.*;
+
+/**
+ * @author Margo Theobald <mtheobal@skidmore.edu>
+ *
+ */
+public class Events {
+
+	private Guest[] guestList;
+	private Staff[] staffList;
+	private String[] staffNames;
+	private int staffIndex;
+	private int guestIndex;
+	private String guestListFile;
+	private String staffListFile;
+
+	/**
+	 * Create a constructor to read files takes in file name for the guest list
+	 * and staff list
+	 * 
+	 * @param guestListFile
+	 * @param staffListFile
+	 * @throws FileNotFoundException
+	 * @throws IOException
+	 */
+	public Events(String guestListFile, String staffListFile)
+			throws FileNotFoundException, IOException {
+		// create string tokenizer and a buffered reader
+		StringTokenizer st;
+		BufferedReader theFile = new BufferedReader(new FileReader(
+				guestListFile));
+		BufferedReader theStaffFile = new BufferedReader(new FileReader(
+				staffListFile));
+		this.guestList = new Guest[10];
+		guestIndex = 0;
+		this.staffList = new Staff[10];
+		this.staffNames = new String[10];
+		this.staffListFile = staffListFile;
+		this.guestListFile = guestListFile;
+		staffIndex = 0;
+		// reading files delimiter is $ for all text files.
+		// .trim removes white spaces
+		while (theStaffFile.ready()) {
+			String theLine = theStaffFile.readLine();
+			st = new StringTokenizer(theLine, "$");
+			String program = st.nextToken().trim();
+			String name = st.nextToken().trim();
+			Staff s = new Staff(name, program);
+			staffList[staffIndex] = s;
+			staffNames[staffIndex] = name;
+			staffIndex++;
+		}
+		theStaffFile.close();
+
+		while (theFile.ready()) {
+			String theLine = theFile.readLine();
+			st = new StringTokenizer(theLine, "$");
+			String name = st.nextToken().trim();
+			String email = st.nextToken().trim();
+			String hotel = st.nextToken().trim();
+			String arrival = st.nextToken().trim();
+			String departure = st.nextToken().trim();
+			String program = st.nextToken().trim();
+			Guest g = new Guest(name, email, hotel, arrival, departure, program);
+			add(g);
+			for (int i = 0; i < staffIndex; i++) {
+				if (staffList[i].getProgram().equals(g.getProgram())) {
+					staffList[i].add(g);
+					break;
+				}
+			}
+		}
+		theFile.close();
+	}
+
+	/**
+	 * This method takes in a guest object and adds to the guest array
+	 * 
+	 * @param g
+	 */
+
+	public void add(Guest g) {
+		if (guestIndex >= guestList.length) {
+			Guest temp[] = new Guest[guestList.length + 10];
+			for (int i = 0; i < guestList.length; i++) {
+				temp[i] = guestList[i];
+			}
+			temp[guestIndex] = g;
+			guestList = temp;
+			guestIndex++;
+		} else {
+			guestList[guestIndex] = g;
+			guestIndex++;
+		}
+	}
+
+	public void addNewGuests(Guest g) {
+		add(g);
+		for (int i = 0; i < staffIndex; i++) {
+			if (staffList[i].getProgram().equals(g.getProgram())) {
+				staffList[i].add(g);
+				break;
+			}
+		}
+	}
+
+	public void add(Staff s) {
+		if (staffIndex >= staffList.length) {
+			Staff temp[] = new Staff[staffList.length + 10];
+			for (int i = 0; i < staffList.length; i++) {
+				temp[i] = staffList[i];
+			}
+			temp[staffIndex] = s;
+			staffList = temp;
+			staffIndex++;
+		} else {
+			staffList[staffIndex] = s;
+			staffIndex++;
+		}
+	}
+
+	public boolean programExists(String program) {
+		for (int i = 0; i < staffIndex; i++) {
+			if (staffList[i].getProgram().equalsIgnoreCase(program)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * @return
+	 */
+	private String printGuestArray() {
+		String s = "";
+		for (int i = 0; i < guestIndex; i++) {
+			s += guestList[i] + "\n";
+		}
+		return s;
+	}
+
+	/**
+	 * @return
+	 */
+	private String printStaffArray() {
+		String s = "";
+		for (int i = 0; i < staffIndex; i++) {
+			s += staffList[i] + "\n";
+		}
+		return s;
+	}
+
+	public String printProgram() {
+		String s = "";
+		for (int i = 0; i < staffIndex; i++) {
+			s += staffList[i].getProgram() + "\n";
+		}
+		return s;
+	}
+
+	public String toString() {
+		return printStaffArray();
+	}
+	//	Salome Egas				$salome@skidmore.edu	$Marriott		$10/23/2014	$10/25/2014	$Davis
+
+	public void save() {
+		try {
+			BufferedWriter theGuestFile = new BufferedWriter(new FileWriter(guestListFile));
+			BufferedWriter theStaffFile = new BufferedWriter(new FileWriter(staffListFile));
+
+			for (int i = 0; i < guestList.length; i++){
+				String line = guestList[i].getName() + "\t$" 
+						+ guestList[i].getEmail() + "\t$" 
+						+ guestList[i].getHotel() + "\t$"
+						+ guestList[i].getArrival() + "\t$" 
+						+ guestList[i].getDeparture() + "\t$" 
+						+ guestList[i].getProgram();
+				theGuestFile.write(line);
+
+			}
+			
+			for (int i = 0; i < staffList.length; i++){
+				String line = staffList[i].getProgram() + "\t$" + staffList[i].getName();
+				theStaffFile.write(line);
+				
+			}
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+}

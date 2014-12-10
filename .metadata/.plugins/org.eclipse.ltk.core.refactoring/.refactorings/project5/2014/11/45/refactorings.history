@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;project5.Guest.getDeparture()&apos;&#x0D;&#x0A;- Original project: &apos;project5&apos;&#x0D;&#x0A;- Destination element: &apos;project5.Guest.getDeparture()&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     project5.Guest.getName()&#x0D;&#x0A;     project5.Guest.getDeparture()&#x0D;&#x0A;     project5.Guest.getProgram()" description="Copy methods" destination="/src&lt;project5{Guest.java[Guest~getDeparture" element1="/src&lt;project5{Guest.java[Guest~getName" element2="/src&lt;project5{Guest.java[Guest~getDeparture" element3="/src&lt;project5{Guest.java[Guest~getProgram" flags="589830" id="org.eclipse.jdt.ui.copy" members="3" policy="org.eclipse.jdt.ui.copyMembers" stamp="1415140695868" version="1.0"/>
+</session>
